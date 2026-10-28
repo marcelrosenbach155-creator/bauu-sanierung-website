@@ -3,7 +3,8 @@
 set -e
 cd /var/www/bauu-sanierung
 git pull --ff-only
-cp server/nginx-bauu-sanierung.conf /etc/nginx/sites-available/bauu-sanierung
+# Konfig nur beim ersten Mal kopieren, sonst wuerden die SSL-Eintraege von certbot ueberschrieben
+[ -f /etc/nginx/sites-available/bauu-sanierung ] || cp server/nginx-bauu-sanierung.conf /etc/nginx/sites-available/bauu-sanierung
 ln -sf /etc/nginx/sites-available/bauu-sanierung /etc/nginx/sites-enabled/bauu-sanierung
 nginx -t
 systemctl reload nginx
