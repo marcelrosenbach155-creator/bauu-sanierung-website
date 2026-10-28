@@ -20,7 +20,9 @@ a{color:inherit}
 
 /* Header */
 header{position:sticky;top:0;z-index:20;background:rgba(28,34,38,.96);backdrop-filter:blur(8px);color:#fff}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo img{height:54px;width:auto}
+.hero-logo{width:100%;max-width:460px;height:auto;margin:0 0 28px -10px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.02em;font-size:20px}
 .logo-mark{width:34px;height:34px;border-radius:8px;background:var(--accent);display:grid;place-items:center}
 .logo small{display:block;font-weight:500;font-size:11px;letter-spacing:.08em;opacity:.7;text-transform:uppercase}
@@ -122,6 +124,7 @@ footer{background:#14191c;color:#9fa9ae;padding:32px 0;font-size:14px}
 
 @media (max-width:900px){
   .nav-links{display:none}
+  .hero-logo{max-width:340px}
   .hero-inner{grid-template-columns:1fr;padding:64px 20px 72px;gap:36px}
   .grid-3,.contact-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr;gap:32px 22px}
